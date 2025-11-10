@@ -4,16 +4,60 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kancelaria Adwokacka • Adwokat Anna Franus – Zielona Góra</title>
+  <meta name="description" content="Kancelaria Adwokacka Adwokat Anna Franus w Zielonej Górze. Profesjonalna pomoc prawna: rozwody, alimenty, spadki, umowy, obsługa firm. Skutecznie i z zaangażowaniem. Tel. +48 694 990 105." />
+  <meta name="keywords" content="adwokat Zielona Góra, kancelaria adwokacka, adwokat rodzinny, prawo cywilne, prawnik, spadki, rozwody, alimenty, umowy, kancelaria Anna Franus" />
+  <meta name="author" content="Kancelaria Adwokacka Adwokat Anna Franus" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://adwokatannafranus.pl/" />
   <link rel="icon" type="image/png" href="logo.png" sizes="32x32">
   <link rel="shortcut icon" type="image/png" href="logo.png">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap" as="style" onload="this.rel='stylesheet'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap"></noscript>
+
   <meta name="description" content="Kancelaria Adwokacka Adwokat Anna Franus w Zielonej Górze. Prawo rodzinne, cywilne, spadkowe, gospodarcze i administracyjne. Porady, reprezentacja, umowy." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
   <!-- Leaflet (OpenStreetMap) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kancelaria Adwokacka Adwokat Anna Franus",
+  "image": "https://adwokatannafranus.pl/logo.png",
+  "url": "https://adwokatannafranus.pl/",
+  "telephone": "+48 694 990 105",
+  "email": "adwokat.annafranus@gmail.com",
+  "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Ceglana 25 lok. 2",
+    "addressLocality": "Zielona Góra",
+    "postalCode": "65-211",
+    "addressCountry": "PL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 51.93897014901283,
+    "longitude": 15.518801744946776
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "17:00"
+  }],
+  "sameAs": [
+    "https://www.facebook.com/share/1CvWSiwB24/?mibextid=wwXIfr",
+    "https://www.instagram.com/adwokat_anna_franus"
+  ]
+}
+</script>
 
   <style>
 :root {
@@ -53,6 +97,17 @@ img{max-width:100%;display:block;border-radius:var(--radius)}
 }
 
 .brand h1{font-size:18px;line-height:1.1;margin:0}
+.brand h1{
+  font-family: 'Crimson Text', Georgia, 'Times New Roman', Times, serif !important;
+  font-weight: 700;
+  letter-spacing: .2px;
+  line-height: 1.05;
+}
+
+/* Opcjonalnie subtelniejsze wyrównanie na mobile, jeśli chcesz ciut mniejszy rozmiar */
+@media (max-width: 560px){
+  .brand h1{ font-size: 17px; }
+}
 .nav a.btn{padding:10px 14px;border-radius:12px;border:1px solid rgba(42,169,169,.35);background:linear-gradient(180deg,rgba(42,169,169,.15),rgba(42,169,169,.05));color:#e6f9ff}
 /* Ujednolicenie pozycji menu w dropdownie MOBILNYM */
 .nav .links a {
@@ -103,7 +158,8 @@ h3{font-size:26px;margin:0 0 14px}
 .tick{width:22px;height:22px;border-radius:8px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.45);display:grid;place-items:center;flex:0 0 22px}
 
 /* Gallery */
-.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;justify-content:center}
+
 .gallery img{height:100%;object-fit:cover}
 
 /* Pricing */
@@ -287,6 +343,30 @@ footer{margin-top:60px;border-top:1px solid rgba(148,163,184,.12);padding:28px 0
 @keyframes fadeIn{ from{opacity:0; transform:translateY(-4px)} to{opacity:1; transform:translateY(0)} }
 
 
+/* ----- iPhone/Safari only fixes ----- */
+@supports (-webkit-touch-callout: none) {
+  /* 1) Galeria: nie wymuszaj height:100% – użyj naturalnych proporcji */
+  .gallery img{
+    height: auto !important;
+    width: 100%;
+    object-fit: cover;
+    /* opcjonalnie, aby ujednolicić wysokości na iOS:
+       aspect-ratio: 4 / 3;  */
+  }
+
+  /* 2) Obrazek w stopce (jeśli masz) – też bez height:100% */
+  .post-footer-image img{
+    height: auto !important;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* 3) Hero na iOS: uniknij skakania 100vh przez pasek adresu */
+  .hero-image{
+    min-height: 78svh; /* iOS-friendly viewport unit */
+    background-position: center right;
+  }
+}
 
   </style>
 </head>
@@ -341,20 +421,20 @@ footer{margin-top:60px;border-top:1px solid rgba(148,163,184,.12);padding:28px 0
         <div class="card">
           <h3>Zakres usług</h3>
           <ul class="list">
-            <li><span class="tick">✔</span><div><strong>Prawo rodzinne i opiekuńcze</strong> — rozwody, alimenty, kontakty z dzieckiem, władza rodzicielska.</div></li>
-            <li><span class="tick">✔</span><div><strong>Prawo cywilne i spadkowe</strong> — roszczenia, umowy, spadki, zachowki.</div></li>
-            <li><span class="tick">✔</span><div><strong>Prawo gospodarcze i administracyjne</strong> — obsługa firm, postępowania urzędowe, odwołania.</div></li>
-            <li><span class="tick">✔</span><div><strong>Opinie i umowy</strong> — analizy prawne, regulaminy, negocjacje.</div></li>
+            <li><span class="tick">✔</span><div><strong>Prawo cywilne</strong> </div></li>
+            <li><span class="tick">✔</span><div><strong>Prawo rodzinne i opiekuńcze</strong> (sprawy o rozwód, alimenty, kontakty z dzieckiem, władza rodzicielska)</div></li>
+            <li><span class="tick">✔</span><div><strong>Prawo spadkowe</strong></div></li>
+            <li><span class="tick">✔</span><div><strong>Prawo gospodarcze</strong></div></li>
+            <li><span class="tick">✔</span><div><strong>Prawo administracyjne</strong></div></li>
           </ul>
         </div>
       </div>
 
       <div class="gallery" style="margin-top:18px">
         <img src="IMG2.JPG" alt="Adwokat przed sądem" title="Adwokat przed sądem" />
-        <img src="IMG3.JPG" alt="Toga adwokacka" title="Toga adwokacka" />
         <img src="IMG4.JPG" alt="Adwokat w kancelarii" title="Adwokat w kancelarii" />
-
       </div>
+
     </div>
   </section>
 
@@ -362,27 +442,41 @@ footer{margin-top:60px;border-top:1px solid rgba(148,163,184,.12);padding:28px 0
   <section id="cennik">
     <div class="container">
       <h3>Cennik – zasady rozliczeń</h3>
-      <p class="muted">Wynagrodzenie zależy od rodzaju i stopnia skomplikowania sprawy oraz wymaganego nakładu pracy. Stosujemy rozliczenia ryczałtowe lub godzinowe. Do kwot doliczany jest VAT. Na każdym etapie informujemy o postępach i prognozie powodzenia działań.</p>
+      <p class="muted"> Na kwotę honorarium adwokackiego składa się wiele czynników, w tym głównie rodzaj i stopień skomplikowania sprawy jak i niezbędny nakład pracy poświęcony konkretnej sprawie. Z uwagi na powyższe wynagrodzenie jest ustalane indywidualnie dla każdej sprawy każdego Klienta w formie kwoty ryczałtowej  lub stawki godzinowej. Staramy się, aby Klient był zadowolony z usług Kancelarii. Wszystkie powierzone nam sprawy traktujemy indywidualnie z najwyższą starannością. Klient jest na bieżąco informowany o aktualnym etapie sprawy oraz o wszelkich następstwach planowanych działań i naszej ocenie szans ich powodzenia. Do ustalonych kwot wynagrodzenia doliczany jest podatek od towarów i usług (VAT) w wysokości wynikającej z obowiązujących stawek.</p>
+      <p class="muted">Poniżej prezentujemy zasady rozliczeń z Klientami Kancelarii.</p>
       <div class="grid-2" style="margin-top:12px">
         <div>
           <details open>
             <summary>Porady prawne</summary>
-            <p>Standardowo jedno spotkanie (ok. 60 minut). Jeśli po poradzie zlecisz dalsze prowadzenie sprawy – koszt porady zaliczymy na poczet wynagrodzenia.</p>
+            <p>Porada obejmuje jedno, około 60-minutowe spotkanie. W sytuacji, gdy Klient zdecyduje się powierzyć Kancelarii dalsze prowadzenie jego sprawy, np. na drodze sądowej, koszt porady zostaje zaliczony na poczet wynagrodzenia za dalszą obsługę prawną.</p>
           </details>
           <details>
             <summary>Pisma procesowe i pozaprocesowe</summary>
-            <p>Cena zależy od złożoności sprawy i terminu przygotowania (pozew, apelacja, wniosek, wezwanie). Informacje o stawkach udzielamy telefonicznie lub mailowo.</p>
+            <p>Koszt sporządzenia pisma procesowego, np. pozwu, apelacji, wniosku czy wezwania zależy od stopnia skomplikowania zagadnienia (stanu faktycznego) oraz terminu, w którym pismo musi zostać przygotowane. Informację o stawce wynagrodzenia można uzyskać drogą telefoniczną lub po przesłaniu zapytania e-mailem.</p>
+          </details>
+          <details>
+            <summary>Negocjacje</summary>
+            <p>Koszt udziału Kancelarii w negocjacjach uzależniony jest od typu sprawy oraz czasochłonności. Może być rozliczany według stawki godzinowej lub ryczałtowo, za całość obsługi.</p>
           </details>
         </div>
         <div>
           <details>
             <summary>Sprawy sądowe</summary>
-            <p>Wycena indywidualna – w zależności od charakteru i stopnia skomplikowania sprawy.</p>
+            <p>Koszt prowadzenia sprawy sądowej (np. rozwodowej, alimentacyjnej czy cywilnej) jest za każdym razem ustalany indywidualnie i zależy od charakteru sprawy, złożoności oraz wymaganego nakładu pracy do jej realizacji. Wynagrodzenie składać się może z opłat za następujące elementy, które Klient może zlecić Kancelarii łącznie lub też Kancelaria może świadczyć pomoc w dowolnym zleconym momencie w toku sprawy: 
+            <ul>
+              <li>reprezentowanie przed sądem rejonowym, okręgowym (pierwszej instancji), </li>
+              <li>reprezentowanie przed sądem okręgowym, apelacyjnym (drugiej instancji), </li>
+              <li>sporządzenie skargi kasacyjnej, </li>
+              <li>pozostałe zlecone czynności. </li>
+            </ul>  
+
+            </p>
           </details>
           <details>
-            <summary>Umowy i negocjacje</summary>
-            <p>Opiniowanie i sporządzanie umów – cena zależna od zakresu i terminu. Udział w negocjacjach – rozliczenie godzinowe lub ryczałtowe.</p>
+            <summary>Opiniowanie i sporządzanie umów</summary>
+            <p>Koszt sporządzenia lub opiniowania umowy zależy od stopnia jej skomplikowania, stopnia szczegółowości dokumentu oraz terminu wykonania prac.</p>
           </details>
+
         </div>
       </div>
     </div>
@@ -402,7 +496,7 @@ footer{margin-top:60px;border-top:1px solid rgba(148,163,184,.12);padding:28px 0
 
         <!-- DZIAŁAJĄCY FORMULARZ FORMSPREE -->
 <form id="contactForm"
-      action="https://formspree.io/f/f/meopybvr"
+      action="https://formspree.io/f/meopybvr"
       method="POST"
       accept-charset="UTF-8">
 
@@ -503,6 +597,24 @@ footer{margin-top:60px;border-top:1px solid rgba(148,163,184,.12);padding:28px 0
     }
   });
 })();
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Jak umówić konsultację z adwokatem?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Wystarczy zadzwonić pod +48 694 990 105 lub wypełnić formularz kontaktowy na stronie." }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy kancelaria udziela porad online?",
+   "acceptedAnswer": { "@type": "Answer", "text": "Tak. Porady prawne online przez telefon, e-mail lub wideorozmowę są dostępne po wcześniejszym umówieniu terminu." }
+  }
+ ]
+}
 </script>
 
 
